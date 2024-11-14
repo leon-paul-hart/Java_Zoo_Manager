@@ -1,18 +1,18 @@
 package tests;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 import zoomanager.creature.Creature;
 import zoomanager.food.Food;
-
-import static org.junit.Assert.assertEquals;
 
 public class CreatureTest {
 
     private Creature creature;
 
-    @Before
+    @BeforeEach
     public void before() {
         creature = new Creature("Spot", "Dog", "Spicy");
     }
@@ -25,7 +25,7 @@ public class CreatureTest {
         //Act
 
         //Assert
-        Assert.assertEquals("Spot", creature.getCreatureName());
+        assertEquals("Spot", creature.getCreatureName());
     }
 
     @Test
@@ -36,7 +36,7 @@ public class CreatureTest {
         //Act
 
         //Assert
-        Assert.assertEquals("Dog", creature.getCreatureType());
+        assertEquals("Dog", creature.getCreatureType());
     }
 
     @Test
@@ -47,7 +47,7 @@ public class CreatureTest {
         //Act
 
         //Assert
-        Assert.assertEquals(0, creature.getStomachContentsCount());
+        assertEquals(0, creature.getStomachContentsCount());
     }
 
     @Test
@@ -58,7 +58,7 @@ public class CreatureTest {
         //Act
 
         //Assert
-        Assert.assertEquals(true, creature.getHungerState());
+        assertEquals(true, creature.getHungerState());
     }
 
     @Test
@@ -69,7 +69,7 @@ public class CreatureTest {
         //Act
 
         //Assert
-        Assert.assertEquals(false, creature.getContainmentState());
+        assertEquals(false, creature.getContainmentState());
     }
 
     @Test

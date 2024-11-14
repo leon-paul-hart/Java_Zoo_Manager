@@ -1,15 +1,16 @@
 package tests;
 
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 import zoomanager.creature.Creature;
 import zoomanager.enclosure.Enclosure;
 import zoomanager.food.Food;
 import zoomanager.food.IFood;
 import zoomanager.zoo.IZoo;
 import zoomanager.zoo.Zoo;
-
-import static org.junit.Assert.assertEquals;
 
 public class ZooTest {
 
@@ -19,7 +20,7 @@ public class ZooTest {
     Enclosure enclosure2;
     IFood food;
 
-    @Before
+    @BeforeEach
     public void before() {
         IZoo = new Zoo("Zizis Zodiac Ziggarut!");
         creature = new Creature("Morchock", "Dragon", "Spicy");

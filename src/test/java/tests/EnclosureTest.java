@@ -1,11 +1,12 @@
 package tests;
 
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 import zoomanager.creature.Creature;
 import zoomanager.enclosure.Enclosure;
-
-import static org.junit.Assert.assertEquals;
 
 public class EnclosureTest {
 
@@ -15,7 +16,7 @@ public class EnclosureTest {
     private Creature creature2;
     private Creature creature3;
 
-    @Before
+    @BeforeEach
     public void before() {
         enclosure = new Enclosure("Volcanic Cave", "Fire", 3);
         enclosure2 = new Enclosure("Volcano Cliff Face", "Fire", 2);
