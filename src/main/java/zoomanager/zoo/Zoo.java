@@ -22,6 +22,8 @@ public class Zoo implements IZoo {
         return this.name;
     }
 
+    // TODO : 14/11/2024 Zoo itself should not be feeding creatures, it should likely be a call to a yet to be implemented 'ZooStaff' class to assign a task to feed creatures.
+
     public void feedCreature(Creature creature, IFood food) {
 
         if (creature.getHungerState()) {
@@ -35,7 +37,8 @@ public class Zoo implements IZoo {
         return this.enclosures.size();
     }
 
-    // TODO: 02/06/2020 Add an additional method for creating a new enclose and its details
+    // TODO: 02/06/2020 Add an additional method for creating a new enclosure and its details
+
     public void addEnclosure(Enclosure enclosure) {
         this.enclosures.add(enclosure);
     }

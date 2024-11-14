@@ -16,9 +16,9 @@ public class Creature implements ICreature {
     public Creature(String name, String type, String foodPreference) {
         this.creatureName = name;
         this.creatureType = type;
-        this.foodPreference = foodPreference;
+        this.foodPreference = foodPreference; // TODO : 14/11/2024 foodPreference should probably be an array of Food items so creatures can have a selection
         this.creatureStomach = new ArrayList<>();
-        this.creatureIsHungry = true;
+        this.creatureIsHungry = true; // TODO : 14/11/2024 Hunger likely requires a countdown of some kind to flip the boolean true/false over time, possible 'Metabolism' class to set rate of change per creature type
         this.creatureIsContained = false;
     }
 
